@@ -8,6 +8,10 @@ FileSync is an open-source file organization and management tool that helps you 
 - Identify and handle duplicate files.
 - Easy-to-use graphical user interface (GUI).
 
+
+![Image Alt Text](images/Capture.png)
+
+
 ## Getting Started
 
 ### Prerequisites
