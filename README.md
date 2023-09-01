@@ -39,7 +39,7 @@ Click the "Organize Files" button to start the organization process.
 
 License
 
-This project is licensed under the [Your License Name] - see the LICENSE file for details.
+This project is licensed under the [FileSync Custom License] - see the LICENSE file for details.
 
 Contributing
 
@@ -55,4 +55,4 @@ Roadmap
 
 Authors
 
-    [github.com/abhi7275] - Your GitHub Profile
+    [github.com/abhi7275] - Abhishek Kumar
