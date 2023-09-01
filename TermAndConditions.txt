@@ -1,0 +1,19 @@
+# FileSync Terms and Conditions
+
+By using FileSync ("the Software") developed by Abhishek Kumar (GitHub profile: [github.com/abhi7275](https://github.com/abhi7275)), you agree to the following terms and conditions:
+
+1. You are allowed to use, modify, and distribute the Software for personal or commercial purposes.
+
+2. You must retain any copyright notices or attributions present in the Software's source code or documentation.
+
+3. You must not use the Software for any illegal or malicious activities.
+
+4. The Software is provided "as is," without any warranties, either express or implied. The author(s) will not be held responsible for any damages or issues caused by the Software.
+
+5. You acknowledge that the Software may include third-party components and libraries, each of which may have its own licensing terms and conditions. You are responsible for complying with these terms.
+
+6. The author(s) reserve the right to change or update these terms and conditions at any time without prior notice.
+
+Please ensure that you read and understand these terms and conditions before using the Software. If you do not agree with these terms, you should not use the Software.
+
+For questions or inquiries, please contact Abhishek Kumar at [your contact information].

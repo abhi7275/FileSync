@@ -1,0 +1,16 @@
+# FileSync Custom License
+
+This software is released under the FileSync Custom License.
+
+## Terms and Conditions
+
+1. You are free to use, modify, and distribute this software.
+2. Redistributions must include the original license text.
+3. You must give appropriate credit by providing a link to the [GitHub profile](https://github.com/abhi7275) of Abhishek Kumar in your project documentation or acknowledgments.
+
+## No Warranty
+
+This software is provided "as is" without warranty of any kind, express or implied. The author(s) will not be liable for any damages, direct or indirect, arising from the use of this software.
+
+By using this software, you agree to abide by the terms and conditions of this license.
+
