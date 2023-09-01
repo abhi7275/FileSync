@@ -9,7 +9,7 @@ FileSync is an open-source file organization and management tool that helps you 
 - Easy-to-use graphical user interface (GUI).
 
 
-![Image Alt Text](images/Capture.png)
+![Image Alt Text](/images/Capture.PNG)
 
 
 ## Getting Started
