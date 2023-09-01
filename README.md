@@ -8,6 +8,10 @@ FileSync is an open-source file organization and management tool that helps you 
 - Identify and handle duplicate files.
 - Easy-to-use graphical user interface (GUI).
 
+
+![Image Alt Text](/images/Capture.PNG)
+
+
 ## Getting Started
 
 ### Prerequisites
@@ -33,6 +37,16 @@ FileSync is an open-source file organization and management tool that helps you 
 4. Launch the FileSync GUI: Usage
    ```shell
     python main.py
+5. If you want to use the application for your window OS then go the FileSync/dist folder and download it.
+
+6. if you want use for your MacOS or Linux then download this repo and follow the below step
+   ```shell
+   Open Pycharm and go the terminal
+   cd FileSync
+   pip install pyinstaller
+   pyinstaller --onefile main.py
+
+
 Use the graphical interface to select your source folder, destination folder, and desired organization options.
 
 Click the "Organize Files" button to start the organization process.
