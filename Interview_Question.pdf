@@ -1,0 +1,111 @@
+    1. Can you briefly explain what the FileSync project is about?
+        Answer: FileSync is an open-source Python application designed to simplify file management for Windows, Linux, and macOS users. It helps users organize, categorize, and manage their files efficiently.
+
+    2. What motivated you to create FileSync, and what problem does it solve?
+        Answer: File management can become chaotic when dealing with a large number of files. FileSync was created to streamline this process, making it easier for users to sort files by type, date, and handle duplicates.
+
+    3. What technologies or libraries did you use to build the graphical user interface (GUI) for FileSync?
+        Answer: FileSync's GUI was built using the tkinter library, a standard GUI library for Python.
+
+    4. Explain the data structure used to represent the file system in the FileSync project.
+        Answer: FileSync uses a tree data structure to represent the file system. It constructs a hierarchical tree-like structure to organize files and folders.
+
+    5. Which algorithms are implemented in FileSync for file organization?
+        Answer: FileSync employs algorithms like sorting by file type, creation date, and modification date. It also includes a duplicate file handling algorithm.
+
+    6. Can you describe the algorithm used to organize files by their creation date?
+        Answer: To organize files by creation date, FileSync iterates through files, retrieves their creation timestamps, and creates a folder structure based on the year and month of creation. Files are then moved to their respective folders.
+
+    7. How does FileSync handle duplicate files, and which algorithm is used for this purpose?
+        Answer: FileSync identifies duplicate files by calculating MD5 hashes and comparing them. When duplicates are found, they are renamed and moved to the destination folder.
+
+    8. Is FileSync platform-independent, and how does it support users on different operating systems?
+        Answer: Yes, FileSync is platform-independent and supports users on Windows, Linux, and macOS. It achieves this by using Python, which is a cross-platform language.
+
+    9. What skills and technologies are essential for someone interested in contributing to the FileSync project?
+        Answer: Contributors should have proficiency in Python, GUI development using tkinter, file handling, and knowledge of data structures like trees. Understanding of algorithms for file sorting and duplicate handling is also beneficial.
+
+    10. How can users convert the FileSync project into an executable (.exe) file for Windows?
+        Answer: Users can utilize tools like PyInstaller or cx_Freeze to convert the Python project into an executable (.exe) file for Windows.
+
+    11. Explain how the tree data structure is used in the FileSync project to represent the file system.
+        Answer: In FileSync, a tree data structure is used to represent the hierarchical organization of files and folders. Each node in the tree represents a folder or file, and child nodes represent subfolders or files within that folder. This tree structure helps organize and navigate the file system efficiently.
+
+    12. Can you describe the depth-first search (DFS) algorithm used in FileSync?
+        Answer: DFS is employed in FileSync when building the file system tree. It starts at the root folder, explores as far as possible along each branch before backtracking. This traversal method allows FileSync to construct the file system hierarchy in a depth-first manner.
+
+    13. How does FileSync sort files by file type, and what algorithm or approach is used?
+        Answer: FileSync sorts files by file type using a simple approach. It extracts the file extension from each file's name and places files with the same extension into a corresponding folder. This process is repeated for all files, resulting in organized folders by file type.
+
+    14. Explain the algorithm used to organize files by their creation date.
+        Answer: The creation date organization algorithm in FileSync involves iterating through files in the source folder, extracting each file's creation timestamp, and creating a folder structure based on the year and month of creation. Files are then moved into the appropriate folders.
+
+    15. How does FileSync handle duplicate files efficiently, and what makes this algorithm effective?
+        Answer: FileSync identifies duplicate files by calculating MD5 hashes of file contents and comparing these hashes. When duplicates are detected, FileSync renames them with a prefix and moves them to the destination folder. This approach is efficient because it relies on hash comparison, making it fast and reliable.
+
+    16. Can you discuss the time complexity of the algorithms used in FileSync for file sorting and duplicate handling?
+        Answer: File sorting by file type, creation date, and modification date in FileSync typically has a time complexity of O(n), where n is the number of files. The duplicate handling algorithm also has a time complexity of O(n), as it processes each file once.
+
+    17. Are there any data structures used internally by FileSync other than the file system tree?
+        Answer: Apart from the file system tree, FileSync primarily uses dictionaries to store file hashes and paths for duplicate checking. These dictionaries allow for efficient hash lookup during duplicate handling.
+
+    18. How does FileSync ensure platform independence in terms of file organization?
+        Answer: FileSync achieves platform independence by relying on Python, which is a cross-platform programming language. The algorithms and file handling operations are consistent across Windows, Linux, and macOS systems.
+
+Pseudocode
+Algorithm 1: Building the File System Tree (DFS-based)
+
+Function BuildFileSystemTree(root_folder):
+    Create a root_node representing root_folder
+    For each (root, dirs, files) in a DFS traversal of the file system starting at root_folder:
+        current_node = root_node
+        relative_path = ComputeRelativePath(root, root_folder)
+        folders = SplitPath(relative_path)
+        For each folder in folders:
+            child_node = FindChildNode(current_node, folder)
+            If child_node is None:
+                child_node = CreateFolderNode(folder)
+                Add child_node to current_node's children
+            current_node = child_node
+        For each file in files:
+            Create a file_node representing file
+            Add file_node to current_node's children
+    Return root_node
+End Function
+
+Algorithm 2: Sorting Files by Type
+
+Function OrganizeByType(source_folder, destination_folder):
+    Create destination_folder if it doesn't exist
+    For each file in source_folder:
+        file_extension = ExtractFileExtension(file)
+        destination_path = JoinPaths(destination_folder, file_extension)
+        If destination_path does not exist:
+            Create destination_path
+        Move file to destination_path
+End Function
+
+Algorithm 3: Sorting Files by Creation Date
+
+Function OrganizeByCreationDate(source_folder, destination_folder):
+    For each file in source_folder:
+        creation_time = GetCreationTime(file)
+        year, month = ExtractYearAndMonth(creation_time)
+        destination_path = JoinPaths(destination_folder, year, month)
+        Create destination_path if it doesn't exist
+        Move file to destination_path
+End Function
+
+Algorithm 4: Handling Duplicate Files (Using MD5 Hashes)
+
+Function IdentifyDuplicates(source_folder, destination_folder):
+    Create an empty dictionary file_hashes
+    For each file in source_folder:
+        file_hash = CalculateMD5Hash(file)
+        If file_hash is in file_hashes:
+            new_filename = GenerateUniqueFilename(file)
+            destination_path = JoinPaths(destination_folder, new_filename)
+            Rename file to destination_path
+        Else:
+            Add file_hash to file_hashes with file path as value
+End Function
